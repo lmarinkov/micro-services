@@ -1,4 +1,4 @@
- #!groovy
+ // #!groovy
  // the pipeline script used on jenkins ...
  node {
      stage('Preparation') { // for display purposes
