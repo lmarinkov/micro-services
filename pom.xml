@@ -10,7 +10,7 @@
 	<version>1.0.0-SNAPSHOT</version>
 
     <properties>
-        <VERSION_NUMBER>1.0.0-SNAPSHOT</VERSION_NUMBER>
+        <newVersion>1.0.1</newVersion>
     </properties>
 	
     <modules>
