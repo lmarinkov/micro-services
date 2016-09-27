@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
 
 	<scm>
-		<connection>scm:https://github.com/lmarinkov/micro-services.git</connection>
+		<connection>scm:git:https://github.com/lmarinkov/micro-services.git</connection>
 	</scm>
 	
     <artifactId>micro-services</artifactId>
