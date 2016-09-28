@@ -1,6 +1,7 @@
 // #!groovy
 // the pipeline script used on jenkins ...
 node {
+    def tag
     def version
     stage('Checkout') { // for display purposes
         git 'https://github.com/lmarinkov/micro-services.git'
@@ -8,8 +9,10 @@ node {
         //bat (/"git clean -f && git reset --hard origin/master"/)
         def pom = readMavenPom file: 'pom.xml'
         version = pom.version.replace("-SNAPSHOT", ".${currentBuild.number}")
+        echo pom.toString()
         echo version.toString()
         echo currentBuild.toString()
+        tag = pom.artifactId + "-" + version
     }
     stage('Release:'+ version.toString()) {
         bat(/"mvn" -f service\pom.xml versions:set -DnewVersion=${version}/)
@@ -21,7 +24,7 @@ node {
         bat(/"mvn" -f consumer\pom.xml clean install/)
     }
     stage('Tag the SCM') {
-        bat(/"mvn" deploy scm:tag/)
+        bat(/"mvn" deploy scm:tag -Dtag=${tag}/)
     }
 }
  
