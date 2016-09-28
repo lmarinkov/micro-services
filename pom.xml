@@ -11,9 +11,10 @@
     <packaging>pom</packaging>
     <name>${project.artifactId}</name>
 	<groupId>ci.poc</groupId>
-	<version>1.0.0-SNAPSHOT</version>
+	<version>1.0-SNAPSHOT</version>
 
     <properties>
+        <!-- Todo: remove this, works good with the version plugin -->
         <newVersion>1.0.1</newVersion>
 		<local.maven.repository>file:///D:/G3/maven-repository-ci/</local.maven.repository>
     </properties>
