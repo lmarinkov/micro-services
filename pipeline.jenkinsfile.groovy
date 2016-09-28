@@ -4,7 +4,9 @@ node {
     def tag
     def version
     stage('Checkout') { // for display purposes
-        git credentialsId: '7f208d5a-2436-426d-9479-748160abc493', 'https://github.com/lmarinkov/micro-services.git'
+        //git credentialsId: '7f208d5a-2436-426d-9479-748160abc493', 'https://github.com/lmarinkov/micro-services.git'
+        git credentialsId: '7f208d5a-2436-426d-9479-748160abc493', url: 'https://github.com/lmarinkov/micro-services.git'
+
         // clean up git locally
         //bat (/"git clean -f && git reset --hard origin/master"/)
         def pom = readMavenPom file: 'pom.xml'
