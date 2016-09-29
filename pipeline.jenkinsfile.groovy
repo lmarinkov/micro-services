@@ -10,7 +10,7 @@ node {
 
         // clean up git locally
         //bat (/"git clean -f && git reset --hard origin/master"/)
-        def pom = readMavenPom file: 'pom.xml'
+        def pom = readMavenPom file: 'service/pom.xml'
         version = pom.version.replace("-SNAPSHOT", ".${currentBuild.number}")
         echo pom.toString()
         echo version.toString()
