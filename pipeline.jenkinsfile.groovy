@@ -18,9 +18,11 @@ node {
         tag = pom.artifactId + "-" + version
     }
     stage('Release:'+ version.toString()) {
+        // Change the version of the project using the current build number
         bat(/"mvn" -f service\pom.xml versions:set -DnewVersion=${version}/)
     }
     stage('Build') {
+        // Check all tests
         bat(/"mvn" -f service\pom.xml clean install/)
     }
     stage('Run Firewall Tests') {
