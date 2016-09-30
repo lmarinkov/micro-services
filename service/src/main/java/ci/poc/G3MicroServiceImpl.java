@@ -1,5 +1,7 @@
 package ci.poc;
 
+import com.cg.helix.util.Objects;
+
 /**
  * Date of creation: 29.09.2016
  * <p>
@@ -11,6 +13,12 @@ package ci.poc;
  */
 public class G3MicroServiceImpl implements G3MicroService {
     public int getCount() {
+
         return 300;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(this);
     }
 }
