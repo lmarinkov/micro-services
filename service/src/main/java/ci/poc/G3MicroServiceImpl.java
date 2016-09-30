@@ -11,6 +11,6 @@ package ci.poc;
  */
 public class G3MicroServiceImpl implements G3MicroService {
     public int getCount() {
-        return 100;
+        return 300;
     }
 }
