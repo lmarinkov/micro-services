@@ -18,6 +18,6 @@ class TestConsumer {
 
     @Test
     void "test count"() {
-        assertThat(consumer.usedCount()).isBetween(1,200)
+        assertThat(consumer.usedCount()).isBetween(1,301)
     }
 }
