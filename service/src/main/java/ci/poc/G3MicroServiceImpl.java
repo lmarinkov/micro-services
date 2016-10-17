@@ -13,7 +13,7 @@ import com.cg.helix.util.Objects;
  */
 public class G3MicroServiceImpl implements G3MicroService {
     public int getCount() {
-
+        // returns 300
         return 300;
     }
 
