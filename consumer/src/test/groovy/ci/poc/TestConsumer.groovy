@@ -5,7 +5,7 @@ import org.testng.annotations.Test
 import static org.assertj.core.api.Assertions.assertThat
 
 /**
- * Date of creation: 29.09.2016
+ * Date of creation: 29.09.2016..
  *
  * Copyright \(c\) CompuGROUP Software GmbH,
  * This software is the confidential and proprietary information of
